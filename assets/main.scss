@@ -3,44 +3,40 @@
 @import "minima";
 
 /* -----------------------------------------
-   COLOR PALETTE (matches veronicodes.com vibe)
+   COLOR PALETTE (matches veronicodes.com)
 ------------------------------------------ */
 :root {
   --bg: #ffffff;
-  --text-dark: #2b2b2b;
+  --text-dark: #343a40;
   --text-light: #6c757d;
-  --accent: #343a40;
-  --accent-dark: #212529;
+  --accent: #503138;
 }
 
 /* -----------------------------------------
    GLOBAL
 ------------------------------------------ */
-body {
-  background: var(--bg);
-  color: var(--text-dark);
+html, body {
+  background: var(--bg) !important;
+  color: var(--text-dark) !important;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.7;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
+    "Helvetica Neue", Arial, sans-serif !important;
+  line-height: 1.7 !important;
 }
 
 /* -----------------------------------------
-   HEADERS (portfolio-style: bold, modern)
+   HEADERS
 ------------------------------------------ */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  letter-spacing: 0.5px;
-  color: var(--accent-dark);
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  letter-spacing: 0.5px !important;
+  color: var(--accent) !important;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3rem !important;
   margin-top: 1rem;
 }
 
@@ -48,7 +44,7 @@ h1 {
    LINKS
 ------------------------------------------ */
 a {
-  color: var(--accent);
+  color: var(--accent) !important;
   text-decoration: none;
   transition: 0.2s ease;
 }
@@ -58,17 +54,17 @@ a:hover {
 }
 
 /* -----------------------------------------
-   HEADER / SITE TITLE AREA
+   HEADER TITLE
 ------------------------------------------ */
 .site-title {
-  font-family: "Saira Extra Condensed", sans-serif;
+  font-family: "Saira Extra Condensed", sans-serif !important;
   font-size: 2.4rem !important;
-  letter-spacing: 1px;
-  color: var(--accent-dark) !important;
+  letter-spacing: 1px !important;
+  color: var(--accent) !important;
 }
 
 /* -----------------------------------------
-   POST LIST
+   POST LIST / TITLES
 ------------------------------------------ */
 .post-list > li {
   padding: 1.4rem 0;
@@ -76,16 +72,20 @@ a:hover {
 }
 
 .post-meta {
-  color: var(--text-light);
+  color: var(--text-light) !important;
 }
 
-.post-title {
-  font-size: 1.8rem;
-  font-weight: 600;
+.post-title, 
+.post-link {
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  font-family: "Saira Extra Condensed", sans-serif !important;
+  letter-spacing: 0.5px;
+  color: var(--accent) !important;
 }
 
 /* -----------------------------------------
-   POST PAGE LAYOUT
+   POST PAGE STYLES
 ------------------------------------------ */
 
 .post-wrapper {
@@ -95,68 +95,32 @@ a:hover {
 }
 
 .post-header {
-  text-align: left;
   margin-bottom: 2.2rem;
 }
 
 .post-title {
-  font-size: 2.6rem;
-  margin-bottom: 0.35rem;
-  font-family: "Saira Extra Condensed", sans-serif;
-  color: var(--accent-dark);
-  letter-spacing: 1px;
+  font-size: 2.6rem !important;
 }
 
 .post-date {
-  margin-top: 0;
-  font-size: 0.95rem;
-  color: var(--text-light);
+  color: var(--text-light) !important;
 }
 
 .post-content {
-  line-height: 1.7;
-  font-size: 1.1rem;
-  color: var(--text-dark);
+  font-size: 1.1rem !important;
+  color: var(--text-dark) !important;
 }
 
 .post-content h2,
 .post-content h3,
 .post-content h4 {
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-  color: var(--accent-dark);
-  font-family: "Saira Extra Condensed", sans-serif;
-}
-
-.post-content p {
-  margin-bottom: 1.2rem;
-}
-
-.post-footer {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid #eaeaea;
-  text-align: left;
-}
-
-.back-link {
-  color: var(--accent);
-  font-size: 1rem;
-  text-decoration: none;
-}
-
-.back-link:hover {
-  opacity: 0.7;
+  color: var(--accent) !important;
+  font-family: "Saira Extra Condensed", sans-serif !important;
 }
 
 /* -----------------------------------------
    FOOTER
 ------------------------------------------ */
 .site-footer {
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid #eaeaea;
-  font-size: 0.9rem;
-  color: var(--text-light);
-  text-align: center;
+  color: var(--text-light) !important;
 }
