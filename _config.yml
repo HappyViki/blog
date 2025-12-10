@@ -1,0 +1,5 @@
+title: Veronicodes Blog
+theme: minima
+plugins:
+  - jekyll-feed
+markdown: kramdown
