@@ -1,15 +1,10 @@
 title: Veronicodes Blog
 description: "Developer notes, projects, and growth"
 theme: minima
-
 markdown: kramdown
-
 kramdown:
   input: GFM
   hard_wrap: true
-
-sass:
-  sass_dir: assets/css
 
 minima:
   skin: classic
