@@ -1,7 +1,7 @@
 title: Veronicodes Blog
-theme: jekyll-theme-tactile
-plugins:
-  - jekyll-feed
+description: "Developer notes, projects, and growth"
+theme: minima
+
 markdown: kramdown
 
 kramdown:
@@ -10,3 +10,6 @@ kramdown:
 
 sass:
   sass_dir: assets/css
+
+minima:
+  skin: classic
