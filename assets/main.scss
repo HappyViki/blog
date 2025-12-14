@@ -3,124 +3,201 @@
 @import "minima";
 
 /* -----------------------------------------
-   COLOR PALETTE (matches veronicodes.com)
+   COLOR PALETTE
 ------------------------------------------ */
-:root {
-  --bg: #ffffff;
-  --text-dark: #343a40;
-  --text-light: #6c757d;
-  --accent: #503138;
-}
+$primary: #503138;
+$text-main: #343a40;
+$text-muted: lighten($text-main, 25%);
+$bg: #ffffff;
+$bg-soft: #faf7f5;
+$border-soft: rgba(80, 49, 56, 0.15);
+
+/* -----------------------------------------
+   TYPOGRAPHY
+------------------------------------------ */
+$font-headings: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji";
+
+$font-body: "Muli", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji";
 
 /* -----------------------------------------
    GLOBAL
 ------------------------------------------ */
-html, body {
-  background: var(--bg) !important;
-  color: var(--text-dark) !important;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif !important;
-  line-height: 1.7 !important;
+body {
+  font-family: $font-body;
+  color: $text-main;
+  background: $bg;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s ease;
+
+  &:hover {
+    border-bottom-color: $primary;
+  }
 }
 
 /* -----------------------------------------
-   HEADERS
+   HEADINGS
 ------------------------------------------ */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  letter-spacing: 0.5px !important;
-  color: var(--accent) !important;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
+  font-family: $font-headings;
+  letter-spacing: 0.04em;
+  color: $primary;
+  margin-top: 2.5rem;
 }
 
 h1 {
-  font-size: 3rem !important;
-  margin-top: 1rem;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
 }
 
 /* -----------------------------------------
-   LINKS
+   SITE HEADER
 ------------------------------------------ */
-a {
-  color: var(--accent) !important;
-  text-decoration: none;
-  transition: 0.2s ease;
+.site-header {
+  border-bottom: 1px solid $border-soft;
+  background: $bg-soft;
 }
 
-a:hover {
-  opacity: 0.7;
-}
-
-/* -----------------------------------------
-   HEADER TITLE
------------------------------------------- */
 .site-title {
-  font-family: "Saira Extra Condensed", sans-serif !important;
-  font-size: 2.4rem !important;
-  letter-spacing: 1px !important;
-  color: var(--accent) !important;
+  font-family: $font-headings;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  color: $primary;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.85;
+  }
+}
+
+.site-nav {
+  .page-link {
+    font-family: $font-body;
+    color: $text-main;
+    margin-left: 1rem;
+
+    &:hover {
+      color: $primary;
+    }
+  }
 }
 
 /* -----------------------------------------
-   POST LIST / TITLES
+   POSTS
 ------------------------------------------ */
-.post-list > li {
-  padding: 1.4rem 0;
-  border-bottom: 1px solid #eaeaea;
+.post-title {
+  font-family: $font-headings;
+  font-size: 3.2rem;
+  letter-spacing: 0.05em;
 }
 
 .post-meta {
-  color: var(--text-light) !important;
-}
-
-.post-title, 
-.post-link {
-  font-size: 1.8rem !important;
-  font-weight: 600 !important;
-  font-family: "Saira Extra Condensed", sans-serif !important;
-  letter-spacing: 0.5px;
-  color: var(--accent) !important;
-}
-
-/* -----------------------------------------
-   POST PAGE STYLES
------------------------------------------- */
-
-.post-wrapper {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-
-.post-header {
-  margin-bottom: 2.2rem;
-}
-
-.post-title {
-  font-size: 2.6rem !important;
-}
-
-.post-date {
-  color: var(--text-light) !important;
+  color: $text-muted;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
 }
 
 .post-content {
-  font-size: 1.1rem !important;
-  color: var(--text-dark) !important;
+  p {
+    margin-bottom: 1.4rem;
+  }
+
+  blockquote {
+    background: $bg-soft;
+    border-left: 4px solid $primary;
+    padding: 1rem 1.5rem;
+    font-style: italic;
+    color: darken($text-main, 5%);
+  }
+
+  ul, ol {
+    margin-left: 1.5rem;
+  }
+
+  code {
+    background: $bg-soft;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  pre {
+    background: $bg-soft;
+    padding: 1.2rem;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
 }
 
-.post-content h2,
-.post-content h3,
-.post-content h4 {
-  color: var(--accent) !important;
-  font-family: "Saira Extra Condensed", sans-serif !important;
+/* -----------------------------------------
+   CARDS / LISTS
+------------------------------------------ */
+.post-list {
+  li {
+    background: $bg-soft;
+    padding: 1.5rem;
+    border-radius: 14px;
+    margin-bottom: 1.5rem;
+    border: 1px solid $border-soft;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+  }
 }
 
 /* -----------------------------------------
    FOOTER
 ------------------------------------------ */
 .site-footer {
-  color: var(--text-light) !important;
+  border-top: 1px solid $border-soft;
+  background: $bg-soft;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: $text-muted;
+
+  a {
+    color: $primary;
+  }
+}
+
+/* -----------------------------------------
+   CUTE DETAILS
+------------------------------------------ */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    $primary,
+    transparent
+  );
+  margin: 3rem 0;
+}
+
+::selection {
+  background: rgba(80, 49, 56, 0.25);
 }
