@@ -39,12 +39,6 @@ body {
 a {
   color: $primary;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: all 0.15s ease;
-
-  &:hover {
-    border-bottom-color: $primary;
-  }
 }
 
 /* -----------------------------------------
@@ -159,12 +153,6 @@ h3 {
     border-radius: 14px;
     margin-bottom: 1.5rem;
     border: 1px solid $border-soft;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    }
   }
 }
 
